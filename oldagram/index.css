@@ -1,0 +1,136 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+#phone {
+    border: 0.25rem solid #222;
+    border-radius: 2rem;
+    width: 375px;
+    margin: 3rem auto;
+    display: block;
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 2px #C6C6C6;
+}
+
+#logo {
+    width: 127px;
+    height: auto;
+    margin: 0px 15px;
+}
+
+.profile-picture {
+    margin: 17px 15px;
+}
+
+.profile-picture, .author-profile-picture {
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+}
+
+.author-profile-picture {
+    margin: 10px 10px;
+}
+
+.author {
+    display: flex;
+}
+
+.author-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.author-username {
+    font-weight: 700;
+    padding-bottom: 2px;
+}
+
+.author-location {
+    line-height: 1;
+}
+
+.author-username, .author-location {
+    font-size: 13px;
+    margin: 0;
+}
+
+.post-img-container {
+    position: relative;
+    width: 100%;
+    height: 375px;
+}
+
+.post-image {
+    z-index: 1;
+}
+
+.post-image, .overlaying-heart {
+    position: absolute;
+    width: 100%;
+}
+
+.heartAnimation {
+    z-index: 2;
+    animation: heartAnimationKeyframes 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+
+.interactions, .comments{
+    padding: 10px 10px 10px 10px
+}
+
+.interactions img {
+    margin-right: 7px;
+}
+
+.likes, .username {
+    font-weight: 700;
+}
+
+.btn {
+    width: 30px;
+}
+
+.likes p {
+    margin: 0;
+}
+
+.likes {
+    padding: 0 10px;
+}
+
+.comments p {
+    margin: 0;
+}
+
+.spacer {
+    height: 50px;
+    background-color: #C6C6C6;
+}
+
+@keyframes heartAnimationKeyframes {
+    0% {
+        transform: scale(0);
+    }
+    65% {
+        transform:scale(0.45);
+    }
+    70% {
+        transform:scale(0.35);
+        opacity: 1;
+    }
+    100% {
+        transform:scale(0);
+        opacity: 0;
+    }
+}
