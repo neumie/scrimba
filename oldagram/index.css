@@ -12,6 +12,8 @@ html, body {
     overflow: hidden;
 }
 
+/* Header */
+
 header {
     display: flex;
     justify-content: space-between;
@@ -35,9 +37,14 @@ header {
     border-radius: 50%;
 }
 
-.author-profile-picture {
-    margin: 10px 10px;
+/* Spacer */
+
+.spacer {
+    height: 50px;
+    background-color: #C6C6C6;
 }
+
+/* Author */
 
 .author {
     display: flex;
@@ -54,14 +61,17 @@ header {
     padding-bottom: 2px;
 }
 
-.author-location {
-    line-height: 1;
-}
-
 .author-username, .author-location {
+    line-height: 1;
     font-size: 13px;
     margin: 0;
 }
+
+.author-profile-picture {
+    margin: 10px 10px;
+}
+
+/* Image content */
 
 .post-img-container {
     position: relative;
@@ -69,53 +79,56 @@ header {
     height: 375px;
 }
 
-.post-image {
-    z-index: 1;
-}
-
 .post-image, .overlaying-heart {
     position: absolute;
     width: 100%;
 }
 
-.heartAnimation {
-    z-index: 2;
-    animation: heartAnimationKeyframes 1s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-out;
-}
-
-.interactions, .comments{
-    padding: 10px 10px 10px 10px
-}
-
-.interactions img {
-    margin-right: 7px;
-}
-
-.likes, .username {
-    font-weight: 700;
-}
+/* Interactions */
 
 .btn {
     width: 30px;
-}
-
-.likes p {
-    margin: 0;
 }
 
 .likes {
     padding: 0 10px;
 }
 
+.likes p {
+    margin: 0;
+}
+
+.likes, .username {
+    font-weight: 700;
+}
+
+.interactions, .comments{
+    display: flex;
+    gap: 12px;
+    padding: 10px 10px 10px 10px
+}
+
 .comments p {
     margin: 0;
 }
 
-.spacer {
-    height: 50px;
-    background-color: #C6C6C6;
+/* Hover Effect */
+
+.btn:hover, .profile-picture:hover, .author-profile-picture:hover {
+    opacity: 0.55;
+}
+
+/* Like Animation */
+
+.overlaying-heart {
+    display: none;
+    opacity: 0;
+}
+
+.heartAnimation {
+    animation-fill-mode: forwards;
+    animation: heartAnimationKeyframes 1s;
+    animation-timing-function: ease-out;
 }
 
 @keyframes heartAnimationKeyframes {
@@ -123,14 +136,14 @@ header {
         transform: scale(0);
     }
     65% {
-        transform:scale(0.45);
+        transform: scale(0.45);
     }
     70% {
-        transform:scale(0.35);
+        transform: scale(0.35);
         opacity: 1;
     }
     100% {
-        transform:scale(0);
+        transform: scale(0);
         opacity: 0;
     }
 }

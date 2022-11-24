@@ -78,7 +78,13 @@ const like = (i, double) => {
     const heart = document.getElementsByClassName("overlaying-heart")[i];
     
     if (!isLiked) {
-        if (double) heart.classList.add("heartAnimation");
+        if (double) {
+            heart.style.display = "inline";
+            heart.classList.add("heartAnimation");
+            setTimeout(() => {
+                heart.style.display = "none";
+            }, 1000);
+        }
         heartIcon.src = "/images/icon-heart-filled.png";
         posts[i].likes++;
         posts[i].liked = true;
