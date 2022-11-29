@@ -1,6 +1,7 @@
 # delivery-app
 
 This is the second solo project at Scrimba's "Frontend Developer Career Path"
+live demo: https://neumie-food-delivery.netlify.app/
 
 ## Description
 
