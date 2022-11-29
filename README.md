@@ -2,7 +2,11 @@
 
 This repository is a collection of solo projects that were assigned to me by Scrimba.
 All of them are done completely solo.
-The given materials are: 1. Project idea 2. Images 3. Data to work with
+The given materials are:
+
+1. Project idea
+2. Images
+3. Data to work with
 
 ## About Scrimba
 
