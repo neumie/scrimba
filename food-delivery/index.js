@@ -2,7 +2,7 @@ import { menuArray } from "./data.js";
 
 const main = document.getElementsByTagName('main')[0];
 const checkout = document.getElementById('checkout');
-const orderNode = document.querySelector('#order');
+const modal = document.getElementById('card-modal');
 
 let order = [];
 
@@ -11,6 +11,14 @@ document.addEventListener('click', (e) => {
         addItemToOrder(e.target.dataset.id);
     } else if (e.target.dataset.remove) {
         removeItemFromOrder(e.target.dataset.remove);
+    } else if (e.target.dataset.checkout) {
+        modal.style.display = 'block';
+    } else if (e.target.dataset.closeModal) {
+        modal.style.display = 'none';
+    } else if (e.target.dataset.pay) {
+        modal.style.display = 'none';
+        order = [];
+        alert("Thank you for your order!")
     } else return;
     renderCheckout();
 });
@@ -57,7 +65,7 @@ const getCheckoutHtml = () => {
                     <h3>Total Price:</h3>
                     <h3>$${getTotalPrice(order)}</h3>
                 </div>
-                <button class="checkout-btn btn">Complete order</button>
+                <button class="checkout-btn btn" data-checkout="checkout">Complete order</button>
                 `
     return html;
 };
@@ -105,7 +113,11 @@ const renderMain = () => {
 };
 
 const renderCheckout = () => {
-    checkout.innerHTML = getCheckoutHtml();
+    if (!order[0]) checkout.style.display = 'none'
+    else {
+        checkout.style.display = 'flex'
+        checkout.innerHTML = getCheckoutHtml();
+    }
 }
 
 renderMain();
