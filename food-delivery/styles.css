@@ -1,0 +1,149 @@
+body {
+    margin: 0;
+    font-family: 'Smythe', cursive;
+}
+
+#phone {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 700px;
+    width: 375px;
+    margin: 3rem auto;
+
+    border: 0.25rem solid #222;
+    border-radius: 2rem;
+
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    height: 125px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+
+    background-image: url(./images/burger-background.jpg);
+    background-size: cover;
+    background-position-y: 70%;
+}
+
+/* Typography */
+
+h1, h2, h3, h4, h5, p{
+    margin: 0;
+}
+
+header h1, header h4 {
+    font-weight: normal;
+
+    color: whitesmoke;
+
+    text-shadow: black 0 0 20px;
+}
+
+.menu-item p {
+    color: #949494;
+}
+
+#checkout h3 {
+    font-weight: normal;
+}
+
+/* Button */
+
+.btn {
+    color: white;
+    padding: 13px 0;
+    cursor: pointer;
+    border: none;
+    background-color: #16DB99;
+}
+
+/* Menu Item */
+
+.menu-item {
+    display: flex;
+
+    margin: 0 30px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+
+    border-bottom: solid whitesmoke 2px;
+}
+
+.menu-item-image {
+    width: 50x;
+    height: 50px;
+
+    margin-right: 15px;
+}
+
+.menu-item-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.price {
+    margin-top: auto;
+}
+
+.menu-item .add {
+    cursor: pointer;
+
+    margin: auto 0;
+    margin-left: auto;
+
+    width: 45px;
+    height: 45px;
+
+    border-style: solid;
+    border-radius: 50%;
+    border-color: whitesmoke;
+}
+
+/* Checkout */
+
+#checkout {
+    display: flex;
+    flex-direction: column;
+
+
+    margin: 20px 30px;
+    margin-top: auto;
+}
+
+#checkout h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.remove {
+    font-size: 10px;
+    cursor: pointer;
+    margin-right: auto;
+    background: none;
+    border: none;
+    color: #949494;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: solid #949494 2px;
+}
+
+.checkout-btn {
+    margin-top: 20px;
+}
