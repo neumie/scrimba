@@ -13,14 +13,19 @@ document.addEventListener('click', (e) => {
         removeItemFromOrder(e.target.dataset.remove);
     } else if (e.target.dataset.checkout) {
         modal.style.display = 'block';
-    } else if (e.target.dataset.closeModal) {
+    } else return;
+    renderCheckout();
+});
+
+modal.addEventListener('click', (e) => {
+    if (e.target.dataset.closeModal) {
         modal.style.display = 'none';
     } else if (e.target.dataset.pay) {
         modal.style.display = 'none';
         order = [];
         alert("Thank you for your order!")
+        renderCheckout();
     } else return;
-    renderCheckout();
 });
 
 // Menu
