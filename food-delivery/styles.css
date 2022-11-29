@@ -61,6 +61,7 @@ header h1, header h4 {
     cursor: pointer;
     border: none;
     background-color: #16DB99;
+    border-radius: 3px;
 }
 
 /* Menu Item */
@@ -87,7 +88,7 @@ header h1, header h4 {
     flex-direction: column;
 }
 
-.price {
+.item-price {
     margin-top: auto;
 }
 
