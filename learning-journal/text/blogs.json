@@ -1,19 +1,18 @@
 {
-    "first": {
+    "blogs":[
+    {
         "date": "July, 23, 2022",
         "title": "Blog one",
         "text": "I'm excited to start a new learning journey as a Scrimba Bootcamp student! After several months of learning in the Frontend Developer Career Path."
     },
-
-    "second": {
+    {
         "date": "August, 59, 2212",
         "title": "Blog two",
         "text": "I decided to import the text from json, but after doing the quick research i realised that the text under each blog is the same."
     },
-
-    "third": {
+    {
         "date": "November, 45, 2342",
         "title": "Blog three",
         "text": "Which is kinda shame, but whatever. This is just a dummy text that has to fill some space on this journal website."
     }
-}
+]}
