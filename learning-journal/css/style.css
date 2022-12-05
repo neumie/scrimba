@@ -108,6 +108,10 @@ main {
     object-fit: cover;
 }
 
+.article-content, .about img {
+    padding: 0 2rem;
+}
+
 /* ABOUT */
 
 .about img{
