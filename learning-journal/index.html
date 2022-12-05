@@ -1,11 +1,48 @@
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>My Learning Journal</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- CSS -->
         <link rel="stylesheet" href="css/style.css">
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/d1c1baccaa.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <h1>index.html</h1>
-        <script type='module' src="index.js"></script>
+
+        <header>
+            <div id="logo">
+                <img src="./images/logo.png" alt="my learning journal logo">
+                <p>My learning journal</p>
+            </div>
+            <nav>
+                <ul>
+                    <li id="home-button">home</li>
+                    <li id="about-button">about me</li>
+                </ul>
+            </nav>
+        </header>
+
+
+        <main>
+            <article class="hero article">
+                <p class="date">July, 23, 2022</p>
+                <h1>My new journey as a bootcamp student.</h1>
+                <p>After several months of learning in the Frontend Developer Career Path, I've made the big jump over to the Bootcamp to get expert code reviews of my Solo Projects projects and meet like-minded peers.</p>
+            </article>
+
+            <section id="blogs">
+            </section>
+
+            <div id="more">
+                <h4>View More</h2>
+            </div>
+        </main>
+
+        <footer>
+            <p>My Learning Journal</p>
+            <p class="copyright">Copyright ©2022</p>
+        </footer>
+
+        <script type="module" src="index.js"></script>
     </body>
 </html>

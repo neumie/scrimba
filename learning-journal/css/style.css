@@ -1,5 +1,182 @@
+/* VARIABLES */
+
+:root {
+    --gap-size: 1.35em;
+}
+
+/* OTHER */
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
 html, 
 body {
     margin: 0;
     padding: 0;
+}
+
+/* TYPOGRAPHY */
+
+.date {
+    font-size: 0.8em;
+    text-transform: uppercase;
+}
+
+p {
+    line-height: 1.35em;
+    margin: 0;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0.25em 0;
+}
+
+.blog-text {
+    color: #505050;
+}
+
+/* GRID */
+
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4em 1fr 4em;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+}
+
+/* HEADER */
+
+header {
+    grid-area: header;
+    display: flex;
+
+    padding: 0.25em var(--gap-size);
+    gap: 1em;
+    min-width: 300px;
+    align-items: center;
+}
+
+header ul {
+    display: flex;
+    gap: 2em;
+
+    font-size: 0.75rem;
+    text-transform: uppercase;
+
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    gap: 0.25em;
+}
+
+header img {
+    width: 1.75em;
+    height: 1.75em;
+    object-fit: cover;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+} 
+
+/* MAIN */
+
+main {
+    grid-area: main;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-self: center;
+}
+
+main .hero {
+    width: 100%;
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 100%;
+
+    padding: 1.125em;
+    min-height: 17.5em;
+}
+
+.article img {
+    width: 100%;
+}
+
+.about img {
+    width: 10em;
+}
+
+.hero {
+    justify-content: flex-end;
+
+    color: white;
+
+    background-position: center;
+    background-size: cover;
+    background-image: url("./../images/home-laptop.png");
+}
+
+#blogs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+
+
+    gap: 3em;
+    padding: var(--gap-size);
+}
+
+.blog img{
+    width: 100%;
+}
+
+.blog .date {
+    margin-top: 1em;
+}
+
+/* VIEW MORE */
+
+#more h4 {
+    cursor: pointer;
+    text-align: center;
+    text-decoration: underline;
+    margin: 0 0 2em 0;
+}
+
+/* FOOTER */
+
+footer {
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+
+    color: #ECECEC;
+    background-color: #202020;
+}
+
+footer .copyright {
+    color: #D7D7D7;
+}
+
+footer p {
+    margin: 0.1em;
 }
