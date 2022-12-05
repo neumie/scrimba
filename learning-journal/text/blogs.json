@@ -16,6 +16,24 @@
         "date": "November, 45, 2342",
         "title": "Blog three",
         "image": "blog-three.png",
-        "text": "Which is kinda shame, but whatever. This is just a dummy text that has to fill some space on this journal website."
+        "text": "Which is kinda a shame, but whatever. This is just a dummy text that has to fill some space on this journal website."
+    },
+    {
+        "date": "November, 45, 2342",
+        "title": "Blog four",
+        "image": "blog-four.png",
+        "text": "Which is kinda a shame, but whatever. This is just a dummy text that has to fill some space on this journal website."
+    },
+    {
+        "date": "November, 45, 2342",
+        "title": "Blog five",
+        "image": "blog-five.png",
+        "text": "Which is kinda a shame, but whatever. This is just a dummy text that has to fill some space on this journal website."
+    },
+    {
+        "date": "November, 45, 2342",
+        "title": "Blog six",
+        "image": "blog-six.png",
+        "text": "Which is kinda a shame, but whatever. This is just a dummy text that has to fill some space on this journal website."
     }
 ]}

@@ -2,6 +2,8 @@
     <head>
         <title>My Learning Journal</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="./images/logo.png">
         <!-- CSS -->
         <link rel="stylesheet" href="css/style.css">
         <!-- Font Awesome -->
@@ -10,7 +12,7 @@
     <body>
 
         <header>
-            <div id="logo">
+            <div class="logo">
                 <img src="./images/logo.png" alt="my learning journal logo">
                 <p>My learning journal</p>
             </div>
@@ -22,19 +24,13 @@
             </nav>
         </header>
 
-
         <main>
-            <article class="hero article">
-                <p class="date">July, 23, 2022</p>
-                <h1>My new journey as a bootcamp student.</h1>
-                <p>After several months of learning in the Frontend Developer Career Path, I've made the big jump over to the Bootcamp to get expert code reviews of my Solo Projects projects and meet like-minded peers.</p>
-            </article>
+            <article class="article hero"></article>
 
-            <section id="blogs">
-            </section>
-
-            <div id="more">
-                <h4>View More</h2>
+            <div class="blogs-container">
+                <h3 class="recent">Recent Posts</h3>  
+                <section class="blogs"></section>
+                <h4 id="more">View More</h2>
             </div>
         </main>
 

@@ -2,12 +2,12 @@ import blogsObject from './text/blogs.json' assert { type: 'json' };
 import home from './text/home.json' assert { type: 'json' };
 import about from './text/about.json' assert { type: 'json' };
 
-const blogSection = document.getElementById('blogs');
+const blogSection = document.getElementsByClassName('blogs')[0];
 const viewMore = document.getElementById('more');
 const article = document.getElementsByClassName('article')[0];
 const aboutButton = document.getElementById('about-button');
 const homeButton = document.getElementById('home-button');
-const logoButton = document.getElementById('logo');
+const logoButton = document.getElementsByClassName('logo')[0];
 
 let postsRendered = 0;
 
@@ -45,15 +45,17 @@ const renderArticle = (article) => {
 
     let html = `
                 <img src="./images/${image}">
-                <h1>${title}</h1>
-                <p>${text}</h1>
+                <div class="article-content">
+                    <h1>${title}</h1>
+                    <p>${text}</h1>
                 `;
     for (const section of sections) {
         html += `
-                <h3>${section.title}</h3>
-                <p>${section.text}</p>
+                    <h3>${section.title}</h3>
+                    <p>${section.text}</p>
                 `
     }
+    html += `</div>`
 
     return html;
 }
@@ -62,7 +64,7 @@ const renderMore = () => {
     let { html, j } = renderPosts(postsRendered, 3);
     postsRendered += j;
     if(isAllRendered()) viewMore.style.display = "none";
-    return html
+    blogSection.innerHTML += html
 }
 
 const renderAbout = () => {
@@ -78,18 +80,18 @@ const renderHome = () => {
 }
 
 const renderHero = () => {
-    article.classList.add("hero");
     article.classList.remove("about");
+    article.classList.add("hero");
     article.innerHTML = `
-                    <p class="date">July, 23, 2022</p>
-                    <h1>My new journey as a bootcamp student.</h1>
-                    <p>After several months of learning in the Frontend Developer Career Path, I've made the big jump over to the Bootcamp to get expert code reviews of my Solo Projects projects and meet like-minded peers.</p>
+                        <p class="date">July, 23, 2022</p>
+                        <h1>My new journey as a bootcamp student.</h1>
+                        <p>After several months of learning in the Frontend Developer Career Path, I've made the big jump over to the Bootcamp to get expert code reviews of my Solo Projects projects and meet like-minded peers.</p>
                     `;
 }
 
 const render = () => {
     renderHero();
-    blogSection.innerHTML += renderMore();
+    renderMore();
 }
 
 // EVENTS
@@ -97,6 +99,6 @@ const render = () => {
 homeButton.addEventListener('click', renderHome);
 aboutButton.addEventListener('click', renderAbout);
 logoButton.addEventListener('click', renderHero);
-viewMore.addEventListener('click', render);
+viewMore.addEventListener('click', renderMore);
 
 render();
