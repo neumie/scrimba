@@ -1,7 +1,7 @@
 # Learning journal
 
 This is the third solo project at Scrimba's "Frontend Developer Career Path"
-live demo: WIP
+live demo: https://neumie-learning-journal.netlify.app/
 
 ## Description
 
