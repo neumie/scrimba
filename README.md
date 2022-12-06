@@ -5,8 +5,9 @@ All of them are done completely solo.
 The given materials are:
 
 1. Project idea
-2. Images
-3. Data to work with
+2. Project design
+3. Images
+4. Data to work with
 
 ## About Scrimba
 
