@@ -6,7 +6,6 @@ const modeSelector = document.getElementById('mode-selector');
 const renderColors = (colors) => {
     colorsDiv.innerHTML = '';
     for (let i = 0; i < colors.length; i++) {
-        console.log('here')
         colorsDiv.innerHTML +=   `
                                 <div class="color" style="background-color:${colors[i].hex.value}"></div>
                                 `

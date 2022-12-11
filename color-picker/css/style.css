@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    
+
     display: grid;
     grid-template-rows: 1fr 5fr;
 
@@ -13,16 +13,22 @@ form {
     display: flex;
     justify-content: space-between;
 
-    gap: 1em;
+    gap: 3em;
     padding: 1em;
 }
 
+#mode-selector {
+    flex-grow: 2;
+}
+
 button {
+    flex-grow: 1;
     width: 20vw;
     padding: 0.5em 0em;
 }
 
 #hex-selector {
+    flex-grow: 1;
     width: 5em;
     height: 3em;
 }
