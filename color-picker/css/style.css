@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    padding: 0;
+    
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+
+    height: 100vh;
+    overflow: hidden;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+
+    gap: 1em;
+    padding: 1em;
+}
+
+button {
+    width: 20vw;
+    padding: 0.5em 0em;
+}
+
+#hex-selector {
+    width: 5em;
+    height: 3em;
+}
+
+#colors {
+    display: flex;
+    overflow: hidden;
+}
+
+.color {
+    width: 20vw;
+    height: 100vh;
+}
